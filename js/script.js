@@ -159,7 +159,17 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
-
+  // Generate password when the button is clicked
+  // Present a series of prompts for password criteria
+  // Lenght of password
+  // At least 8 characteres but no more than 128
+  // Character types
+  // Lowercase
+  // Uppercase
+  // Numeric
+  // Special Characters
+  // Code should validate for each input and at least one character type shou;d be selected
+  // Once prompts are answered then the password should be generated and displayed in an alert or written to the page
 }
 
 // Get references to the #generate element
