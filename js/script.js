@@ -134,17 +134,14 @@ function getPasswordOptions() {
   return {length: passwordLenght, characters: selectedCharacters};
 }
 
-const passwordOptions = getPasswordOptions();
-console.log(passwordOptions);
-
 // Function for getting a random element from an array
-function getRandom(arr) {
+function getRandom(arr, options) {
   // Need a variable to hold the password as it's being generated
   let password = '';
   // Need a variable to hold the index that's being generated
   let generatedIndex;
   // For loop that loops the number of times that matches the length the user chose
-  for (let i = 0; i < passwordOptions.length; i++) {
+  for (let i = 0; i < options.length; i++) {
     // Generate a random number
     // That number is the index for a character in the mega-array
     // So then, mega-array[generated-index] is the actual character
@@ -167,7 +164,7 @@ function generatePassword() {
   }
   
   // Generate password when the button is clicked
-  generatedPassword = getRandom(passwordOptions.characters);
+  generatedPassword = getRandom(passwordOptions.characters, passwordOptions);
   // Once prompts are answered then the password should be generated and displayed in an alert or written to the page
   console.log(`Generated password: ${generatedPassword}`);
 }
@@ -177,10 +174,14 @@ const generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
-  const password = generatePassword();
+  generatePassword();
   const passwordText = document.querySelector('#password');
 
-  passwordText.value = password;
+  if (generatedPassword !== undefined) {
+    passwordText.value = generatedPassword;
+  } else {
+    alert("Failed to generate the password. Try again!")
+  }
 }
 
 // Add event listener to generate button
