@@ -129,10 +129,11 @@ function getPasswordOptions() {
   if (useUpperCasedCharacters) selectedCharacters = selectedCharacters.concat(upperCasedCharacters);
   if (useNumericCharacters) selectedCharacters = selectedCharacters.concat(numericCharacters);
   if (useSpecialCharacters) selectedCharacters = selectedCharacters.concat(specialCharacters);
-  
+
   // Once character sets are selected, move on to generating random characters
   return {length: passwordLenght, characters: selectedCharacters};
 }
+
 
 // Function for getting a random element from an array
 function getRandom(arr, options) {
@@ -162,7 +163,7 @@ function generatePassword() {
     alert("Please, select at least one character set to be used in your password.");
     return;
   }
-  
+
   // Generate password when the button is clicked
   generatedPassword = getRandom(passwordOptions.characters, passwordOptions);
   // Once prompts are answered then the password should be generated and displayed in an alert or written to the page
