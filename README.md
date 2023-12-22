@@ -19,7 +19,7 @@ A password generator application for use by employees. The application generates
 ## Usage
 
 Employees can generate random passwords by clicking on the "Generate Password" button and selecting from the on-screen options. </br>
-![password generator application](https://github.com/AndyFt/password-generator/blob/main/images/screenshot-password-generator.png)
+![password generator application](https://github.com/AndyFt/password-generator/blob/main/assets/images/screenshot-password-generator.png)
 
 ## Credits
 
